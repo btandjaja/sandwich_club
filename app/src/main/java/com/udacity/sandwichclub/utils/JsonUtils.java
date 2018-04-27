@@ -36,7 +36,7 @@ public class JsonUtils {
             sandwichName = name.getString(SW_NAME);
             JSONArray knownAsArray = name.getJSONArray(SW_KNOWN_AS);
             if (knownAsArray.length() == 0)
-                alsoKnownAs = null;
+                alsoKnownAs.add("N/A");
             else
                 alsoKnownAs.add(knownAsArray.getString(0));
 
