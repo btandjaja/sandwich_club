@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
+
+import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -43,7 +46,7 @@ public class DetailActivity extends AppCompatActivity {
             return;
         }
 
-        populateUI();
+        populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
                 .into(ingredientsIv);
@@ -56,7 +59,32 @@ public class DetailActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
-    private void populateUI() {
+    private void populateUI(Sandwich sandwich) {
+//        description_tv
+//        ingredients_tv
+//        also_known_tv
+//        origin_tv
+        /* declare textview variables */
+        TextView description, ingredients, knownAs, origin;
+        /* find textview id */
+        description = findViewById(R.id.description_tv);
+        ingredients = findViewById(R.id.ingredients_tv);
+        knownAs = findViewById(R.id.also_known_tv);
+        origin = findViewById(R.id.origin_tv);
+        /* populate textview */
+        description.setText(sandwich.getDescription());
+        ingredients.setText(convertListToString(sandwich.getIngredients()));
+        knownAs.setText(convertListToString(sandwich.getAlsoKnownAs()));
+        origin.setText(sandwich.getPlaceOfOrigin());
+    }
 
+    private String convertListToString(List<String> string) {
+        /* nonempty list, extract string */
+        String result = "";
+        for(int i = 0; i < string.size(); i++) {
+            result += string.get(i);
+            if (i < string.size() - 1) result += "\n";
+        }
+        return result;
     }
 }
