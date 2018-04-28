@@ -60,10 +60,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-//        description_tv
-//        ingredients_tv
-//        also_known_tv
-//        origin_tv
         /* declare textview variables */
         TextView description, ingredients, knownAs, origin;
         /* find textview id */
@@ -89,6 +85,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private String catchEmptyString(String str) {
+        /* subsitute empty string */
         if (str == null || str.length() == 0 ) return "You should know this!!";
         return str;
     }
