@@ -24,74 +24,58 @@
                 android:scaleType="centerCrop" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp">
+                style="@style/linearlayout">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:text="@string/detail_also_known_as_label"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/also_known_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:layout_marginLeft="8dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp">
+                style="@style/linearlayout">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:text="@string/detail_ingredients_label"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/ingredients_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:layout_marginLeft="8dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp">
+                style="@style/linearlayout">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:text="@string/detail_place_of_origin_label"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/origin_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:layout_marginLeft="8dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp">
+                style="@style/linearlayout">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:text="@string/detail_description_label"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/description_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/textview"
                     android:layout_marginLeft="8dp" />
             </LinearLayout>
         </LinearLayout>
