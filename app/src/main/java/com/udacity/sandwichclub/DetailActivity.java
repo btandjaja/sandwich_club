@@ -83,8 +83,13 @@ public class DetailActivity extends AppCompatActivity {
         String result = "";
         for(int i = 0; i < string.size(); i++) {
             result += string.get(i);
-            if (i < string.size() - 1) result += "\n";
+            if (i < string.size() - 1) result += ", ";
         }
         return result;
+    }
+
+    private String catchEmptyString(String str) {
+        if (str == null || str.length() == 0 ) return "You should know this!!";
+        return str;
     }
 }
