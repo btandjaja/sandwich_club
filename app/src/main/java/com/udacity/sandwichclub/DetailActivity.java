@@ -75,7 +75,7 @@ public class DetailActivity extends AppCompatActivity {
         description.setText(sandwich.getDescription());
         ingredients.setText(convertListToString(sandwich.getIngredients()));
         knownAs.setText(convertListToString(sandwich.getAlsoKnownAs()));
-        origin.setText(sandwich.getPlaceOfOrigin());
+        origin.setText(catchEmptyString(sandwich.getPlaceOfOrigin()));
     }
 
     private String convertListToString(List<String> string) {
